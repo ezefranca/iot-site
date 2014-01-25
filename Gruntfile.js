@@ -12,7 +12,11 @@ module.exports = function(grunt) {
         banner: '<%= banner %>',
         stripBanners: true
       },
-      dist: {
+      css: {
+        src: ['css/*.css', '!css/main.css'],
+        dest: 'css/main.css'
+      },
+      js: {
         src: ['js/*.js', '!js/jquery.js'],
         dest: 'js/<%= pkg.name %>.js'
       }
@@ -21,23 +25,23 @@ module.exports = function(grunt) {
       options: {
         banner: '<%= banner %>'
       },
-      dist: {
-        src: '<%= concat.dist.dest %>',
+      js: {
+        src: '<%= concat.js.dest %>',
         dest: 'js/<%= pkg.name %>.min.js'
       }
     },
     watch: {
       files: {
         files: ['js/*.js', 'css/*.css', '!css/main.css', '!js/iot-site*'],
-        tasks: ['concat', 'uglify', 'uncss']
+        tasks: ['concat:css', 'uncss', 'concat:js', 'uglify:js']
       }
     },
     uncss: {
       dist: {
         files: {
           'css/main.css': ['index.html']
-          }
         }
+      }
     }
   });
 
