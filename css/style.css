@@ -1,10 +1,3 @@
-/**/
-@import url(//fonts.googleapis.com/css?family=Signika:400,300,600,700);
-/* 'Signika', sans-serif */
-
-@import "../css/reset.css";
-@import "../css/superfish.css";
-
 input {
 	outline:  none !important;
 }
@@ -25,7 +18,7 @@ text-decoration:none;
 
 
 body {
-	font: 13px/19px  'Officina Serif ITC TT', Arial, Helvetica, sans-serif;
+	font: 13px/19px 'Officina Serif ITC TT', Arial, Helvetica, sans-serif;
 	color:#ecedef;
 	position:relative;
 	background: #334960;
@@ -103,7 +96,7 @@ a {
 
 a:hover {
 	color: #334960;
-	
+
 }
 
 /*preclass*/
@@ -142,7 +135,7 @@ a:hover {
 }
 
 .fright {
-	float: right !important;	
+	float: right !important;
 }
 
 .upp {
@@ -204,7 +197,7 @@ header h1 a {
 }
 
 header h1 a img {
-	display: block;	
+	display: block;
 }
 
 /*Content*/
@@ -433,7 +426,7 @@ footer a:hover {
 	background:url(../images/totop.png) no-repeat left top;
 	transition: 0s ease;
 	-webkit-transition: 0s ease;
-	-o-transition: 0s ease;	
+	-o-transition: 0s ease;
 }
 #toTop:hover {
 	background-position: right 0;

@@ -141,13 +141,13 @@
 	cursor: pointer;
 }
 .camera_commands > .camera_stop {
-	display: none;	
+	display: none;
 }
 
 
 .slide_wrapper .camera_prev{
 	background: url(../images/prevnext_bg.png) 0 0 repeat;
-	width: 70px;	
+	width: 70px;
 	top: 0 !important;
 	height: auto !important;
 	bottom: 0;
@@ -163,7 +163,7 @@
 .slide_wrapper .camera_prev>span {
 	background: url(../images/prev.png) center 0 no-repeat;
 	top: 50%;
-		
+
 	margin-top: -10px;
 	position: absolute;
 	display: block;
@@ -187,7 +187,7 @@
 
 .slide_wrapper .camera_next {
 	background: url(../images/prevnext_bg.png) 0 0 repeat;
-	width: 70px;	
+	width: 70px;
 	top: 0  !important;
 	bottom: 0;
 	height: auto !important;
@@ -222,7 +222,7 @@
 	background-color: #b8684f;
 }
 .camera_thumbs_cont ul li {
-	
+
 	display: inline;
 }
 .camera_thumbs_cont ul li > img {

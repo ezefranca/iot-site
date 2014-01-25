@@ -1,0 +1,18 @@
+{
+  "name": "iot-site",
+  "version": "0.1.0",
+  "description": "Kit IoT Site",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m SimpleHTTPServer"
+  },
+  "author": "Telefonica Vivo",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt-contrib-uglify": "~0.3.2",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt": "~0.4.2",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-uncss": "~0.1.9"
+  }
+}
