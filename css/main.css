@@ -1,79 +1,6 @@
 /*! iot-site - v0.1.0 - 2014-01-25
 * Copyright (c) 2014 ; Licensed  */
 
-.slider_wrapper {
-  overflow: hidden;
-  position: relative;
-  z-index: 0;
-  width: 100%;
-  height: 400px;
-}
-
-.caption {
-  left: 0px;
-  right: 0px;
-  top: 0;
-  bottom: 0;
-  position: absolute;
-  z-index: 1 !important;
-}
-
-/**************************
-*
-*	COLORS & SKINS
-*
-**************************/
-
-/**************************
-
-
-.camera_prev {
-	display: block;
-	position: absolute;
-	background: url(../images/prevnext.png) 0 0 no-repeat;
-	width: 48px;
-	height: 48px;
-	top: 19px;
-	right: 92px;
-	z-index: 999;
-	opacity:  1 !important;
-	transition: 0s ease;
-	-o-transition: 0. ease;
-	-webkit-transition: 0s ease;
-}
-
-
-.camera_next {
-	right: 40px;
-	display: block;
-	position: absolute;
-	background: url(../images/prevnext.png) right bottom no-repeat;
-		width: 48px;
-	height: 48px;
-	top: 19px;
-	right: 42px;
-	z-index: 999;
-	transition: 0s ease;
-	-o-transition: 0s ease;
-	-webkit-transition: 0s ease;
-	opacity: 1 !important;
-
-}
-
-
-.camera_next:hover {
-	cursor: pointer;
-	background-position: right 0;
-}
-
-.camera_prev:hover {
-	cursor: pointer;
-	background-position: 0 bottom;
-}
-
-
-**************************/
-
 /*
   Forces backgrounds to span full width,
   even if there is horizontal scrolling.
@@ -130,6 +57,14 @@ body {
 
 @import url(//fonts.googleapis.com/css?family=Signika:700);
 
+/*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
+
+/* Overlay helper */
+
+/* Title helper */
+
+/*Retina graphics!*/
+
 a,
 b,
 body,
@@ -143,7 +78,6 @@ img,
 li,
 p,
 section,
-span,
 strong,
 ul {
   background: transparent;
@@ -224,7 +158,7 @@ html {
 }
 
 body {
-  font: 13px/19px 'Officina Serif ITC TT', Arial, Helvetica, sans-serif;
+  font: 13px/19px Arial, Helvetica, sans-serif;
   color: #ecedef;
   position: relative;
   background: #334960;
@@ -233,19 +167,20 @@ body {
 h1,
 h2 {
   font-weight: normal;
-  font-family: 'Officina Serif ITC TT', sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   color: #ffffff;
 }
 
-h2 {
+.caption h2 {
   font-size: 60px;
+  font-weight: normal;
   padding-top: 101px;
   line-height: 60px;
   text-align: center;
 }
 
 p {
-  margin-bottom: 19px;
+  margin-bottom: 20px;
 }
 
 img {
@@ -283,7 +218,7 @@ header {
   z-index: 999;
   left: 0;
   right: 0;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
   top: 0;
   overflow: hidden;
   background-color: #334960;
@@ -342,11 +277,18 @@ header {
 }
 
 #page1 {
-  padding-bottom: 190px;
+  padding-bottom: 180px;
 }
 
 header.page1 .men .hover {
   top: 0;
+}
+
+.page1-bg {
+  background-image: url(../images/banner.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 #page2 {
@@ -373,7 +315,7 @@ header.page1 .men .hover {
   color: #333;
   font-size: 48px;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 .text1 {
@@ -395,10 +337,6 @@ header.page1 .men .hover {
   text-align: left;
 }
 
-.slogan {
-  margin-bottom: 50px;
-}
-
 .box-title {
   font-size: 28px;
   line-height: 30px;
@@ -412,27 +350,6 @@ header.page1 .men .hover {
 .copy {
   padding: 40px 0 20px 0;
   font-size: 12px;
-}
-
-#toTop {
-  display: none;
-  position: fixed;
-  bottom: 40px;
-  overflow: hidden;
-  width: 45px;
-  height: 45px;
-  border: none;
-  text-indent: -100%;
-  z-index: 999;
-  right: 30px;
-  background: url(../images/totop.png) no-repeat left top;
-  transition: 0s ease;
-  -o-transition: 0s ease;
-  -webkit-transition: 0s ease;
-}
-
-#toTop:hover {
-  background-position: right 0;
 }
 
 .menu_block {

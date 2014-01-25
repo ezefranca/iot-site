@@ -24,11 +24,37 @@ $(document).ready(function () {
     });
   }();
 
+  $('.fancybox-media').fancybox({
+		openEffect  : 'none',
+		closeEffect : 'none',
+		helpers : {
+			media : {}
+		}
+	});
+
+  //Slider
+  $('.slider_wrapper')._TMS({
+    show: 0,
+    pauseOnHover: false,
+    playBu: false,
+    duration: 800,
+    preset: 'fade',
+    pagination: true,
+    pagNums: false,
+    slideshow: 8000,
+    numStatus: false,
+    banners: 'fade',
+    waitBannerAnimation: false,
+    progressBar: false
+  });
+
+  //Go to top
   $().UItoTop({
     easingType: 'easeOutQuart'
   });
 });
 
+//Go to By scroll
 function goToByScroll(id) {
   $('html, body').animate({
     scrollTop: $("#"+id).offset().top
