@@ -17,7 +17,7 @@ module.exports = function(grunt) {
         dest: 'css/main.css'
       },
       js: {
-        src: ['js/*.js', '!js/jquery.js'],
+        src: ['js/lib/*.js', '!js/lib/jquery.js'],
         dest: 'js/<%= pkg.name %>.js'
       }
     },
@@ -32,7 +32,7 @@ module.exports = function(grunt) {
     },
     watch: {
       files: {
-        files: ['js/*.js', 'css/*.css', '!css/main.css', '!js/iot-site*'],
+        files: ['js/lib/*.js', 'css/*.css', '!css/main.css', '!js/iot-site*'],
         tasks: ['concat:css', 'uncss', 'concat:js', 'uglify:js']
       }
     },

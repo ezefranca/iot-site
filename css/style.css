@@ -15,7 +15,6 @@ text-decoration:none;
 	-webkit-text-size-adjust: none;
 }
 
-
 body {
 	font: 13px/19px 'Officina Serif ITC TT', Arial, Helvetica, sans-serif;
 	color:#ecedef;
@@ -169,35 +168,26 @@ header {
 	top: 0;
 	overflow: hidden;
 	background-color: #334960;
-	transition: 0.2s ease;
-	-o-transition: 0.1s ease;
+	        transition: 0.2s ease;
+	     -o-transition: 0.1s ease;
 	-webkit-transition: 0.2s ease;
-	text-align: center;
 }
 
 
-
-
-h1 {
-	padding-top: 28px;
-	float: left;
-	z-index: 999;
-
-}
-header h1 a {
+.logo {
+  background: url(../images/logo-novo.png) no-repeat left top;
 	display: block;
+	float: left;
 	overflow: hidden;
+	margin-top: 30px;
 	width: 188px;
 	height: 43px;
-	text-indent: -999px;
-	transition: 0s ease;
-	-o-transition: 0s ease;
+	text-indent: -100%;
+	        transition: 0s ease;
+	     -o-transition: 0s ease;
 	-webkit-transition: 0s ease;
 }
 
-header h1 a img {
-	display: block;
-}
 
 /*Content*/
 .content {
@@ -308,41 +298,13 @@ header.page4 .hover {
 	background-color: #d9ecf4;
 }
 
-header.page5{
-	background-color: #334960;
-}
 
-header.page5 .hover {
-	background-color: #3f9fc9;
-}
 
-.content {
-}
-
-.slogan h3 {
+.slogan {
+  color: #333;
+  font-size: 48px;
+  font-weight: bold;
 	margin-bottom: 20px;
-}
-
-#page2 h3 span {
-	background-color: #2aae96;
-}
-
-#page2 h3 {
-	color: #333333;
-}
-
-#page4 h3 {
-	color: #333333;
-}
-
-#page2 h3 span, #page2 h3 em {
-	display: inline-block;
-	padding: 0 3px;
-}
-
-#page2 h3 em {
-	font-style: normal;
-	background-color: #7f4c76;
 }
 
 .text1 {
@@ -375,57 +337,38 @@ header.page5 .hover {
 	margin-bottom: 50px;
 }
 
-#page3  {
-	padding-bottom: 190px;
+.box-title {
+  font-size: 28px;
+  line-height: 30px;
+  color: rgb(51, 51, 51);
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
-
-#page3 h3 {
-	color: #333333;
-}
-
-#page5 h3 {
-	color: #333333;
-}
-
 
 /************Footer***********/
-
-footer {
-	display: block;
-}
-
-footer {
-}
-
-footer a:hover {
-	color: #f17c72;
-}
-
 .copy {
-	color: #e0e8ec;
-	padding-bottom: 30px;
+	padding: 40px 0 20px 0;
 	font-size: 12px;
-	line-height: 24px;
 }
 
-/**to top**/
+
 #toTop {
-	display:none;
-	text-decoration:none;
-	position:fixed;
-	bottom:40px;
-	margin-right: -620px !important;
-	overflow:hidden;
-	width:45px;
-	height:45px;
-	border:none;
-	text-indent:-999px;
-	z-index:999;
-	background:url(../images/totop.png) no-repeat left top;
-	transition: 0s ease;
+	display: none;
+	position: fixed;
+	bottom: 40px;
+	overflow: hidden;
+	width: 45px;
+	height: 45px;
+	border: none;
+	text-indent: -100%;
+	z-index: 999;
+	right: 30px;
+	background: url(../images/totop.png) no-repeat left top;
+	        transition: 0s ease;
+       -o-transition: 0s ease;
 	-webkit-transition: 0s ease;
-	-o-transition: 0s ease;
 }
+
 #toTop:hover {
 	background-position: right 0;
 }
