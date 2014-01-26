@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width, user-scalable=no">
 
 		<title>Kit Desenvolvimento IoT</title>
 
@@ -247,6 +247,87 @@
           Diga-nos seu nome e e-mail e teremos o prazer de lhe fornecer mais informações sobre o nosso Kit Desenvolvimento Internet of Things.
         </p>
 
+        <form class="sendMail" action="">
+          <input type="text" name="name" id="name" placeholder="Nome">
+          <input type="text" name="lastname" id="lastname" placeholder="Sobrenome">
+          <input type="email" name="email" id="email" placeholder="Email">
+
+          <div>
+            <h3>Indique seu ramo de atuação</h3>
+            <p>
+              <label>
+                <input type="radio" name="atuacao" id="atuacao" value="estudante"> Estudante
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="radio" name="atuacao" id="atuacao" value="professor"> Professor
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="radio" name="atuacao" id="atuacao" value="entusiasta"> Entusiasta
+              </label>
+            </p>
+          </div>
+
+          <div>
+            <h3>Quais sensores gostaria de utilizar no futuro?</h3>
+
+            <div>
+              <p>
+                <label>
+                  <input type="checkbox" name="sensores" id="sensores" value="movimento"> Sensor de moviemto
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input type="checkbox" name="sensores" id="sensores" value="restreio"> Sensor de restreio
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input type="checkbox" name="sensores" id="sensores" value="pressao"> Sensor de pressão
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input type="checkbox" name="sensores" id="sensores" value="acelerometro"> Acelerômetro
+                </label>
+              </p>
+            </div>
+
+            <div>
+              <p>
+                <label>
+                  <input type="checkbox" name="sensores" id="sensores" value="fumaca"> Sensor de fumaça
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input type="checkbox" name="sensores" id="sensores" value="poluicao"> Sensor de poluição
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input type="checkbox" name="sensores" id="sensores" value="eletromagnético"> Sensor eletromagnético
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input type="checkbox" name="sensores" id="sensores" value="líquidos"> Sensor de líquidos
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input type="checkbox" name="sensores" id="sensores" value="nfc"> Sensor NFC
+                </label>
+              </p>
+
+            </div>
+          </div>
+
+        </form>
         <img src="images/form.png">
 			</div>
 		</section>

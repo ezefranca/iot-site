@@ -33,13 +33,20 @@ module.exports = function(grunt) {
     watch: {
       files: {
         files: ['js/lib/*.js', 'css/*.css', '!css/main.css', '!js/iot-site*'],
-        tasks: ['concat:css', 'uncss', 'concat:js', 'uglify:js']
+        tasks: ['concat:css', 'uncss', 'cssmin', 'concat:js', 'uglify:js']
       }
     },
     uncss: {
       dist: {
         files: {
           'css/main.css': ['index.html']
+        }
+      }
+    },
+    cssmin: {
+      combine: {
+        files: {
+          'css/main.css': ['css/main.css']
         }
       }
     }
@@ -50,6 +57,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-uncss');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
 
   // Default task.
   grunt.registerTask('default', ['watch']);

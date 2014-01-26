@@ -360,3 +360,16 @@ header.page4 {
   color: #666;
   text-align: left;
 }
+
+
+/* Form */
+.sendMail input {
+  border: solid 1px #334960;
+  font-size: 16px;
+  padding: 8px 15px;
+       border-radius: 5px;
+  -moz-border-radius: 5px;
+  margin: 0 15px 0 15px;
+  width: 150px;
+}
+
