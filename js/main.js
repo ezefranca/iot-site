@@ -1,58 +1,61 @@
 $(document).ready(function () {
-  !function () {
-    var map    = [],
-        names  = [],
-        win    = $(window),
-        header = $('header'),
-        currClass;
+  //Gallery
+  $('#thumbs a').touchTouch();
 
-    $('.content').each(function (n) {
-      map[n]   = this.offsetTop;
-      names[n] = $(this).attr('id');
-    });
+  //Menu click
+  $('.sf-menu a, .logo').click(function () {
+    var page = $(this).attr('href').replace('#', '');
+    goToByScroll(page);
 
-    win.on('scroll', function () {
-      var i = 0;
+    return false;
+  });
 
-      while(map[i++] <= win.scrollTop());
-
-      if (currClass !== names[i-2]) {
-        currClass = names[i-2];
-      }
-
-      header.removeAttr("class").addClass(names[i-2]);
-    });
-  }();
-
+  //Youtube fancybox
   $('.fancybox-media').fancybox({
-		openEffect  : 'none',
-		closeEffect : 'none',
-		helpers : {
-			media : {}
+		openEffect : 'none',
+		closeEffect: 'none',
+		helpers: {
+			media: {}
 		}
 	});
 
   //Slider
-  $('.slider_wrapper')._TMS({
-    show: 0,
-    pauseOnHover: false,
-    playBu: false,
-    duration: 800,
-    preset: 'fade',
-    pagination: true,
-    pagNums: false,
-    slideshow: 8000,
-    numStatus: false,
-    banners: 'fade',
-    waitBannerAnimation: false,
-    progressBar: false
-  });
+  var banner = $('.banner').unslider({
+      speed   : 500,
+      delay   : 5000,
+      complete: function() {},
+      keys    : true,
+      dots    : true,
+      fluid   : true
+    });
 
   //Go to top
   $().UItoTop({
     easingType: 'easeOutQuart'
   });
+
+  setTimeout(function() {
+    var position = [];
+
+    $.each(['#page1', '#page2', '#page3', '#page4', '#page5'], function(i, v) {
+      position.push(Math.abs($(v).position().top));
+    });
+
+    $(window).scroll(function() {
+      var value = $(this).scrollTop();
+
+      $.each(position, function(i) {
+        if(this > value) {
+          $('.current').removeClass('current');
+          $('.sf-menu li').eq(i-1).addClass('current');
+
+          return false;
+        }
+      });
+    });
+  }, 500);
 });
+
 
 //Go to By scroll
 function goToByScroll(id) {

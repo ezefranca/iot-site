@@ -20,61 +20,57 @@
 			<div class="zerogrid">
         <div class="menu_block">
           <ul class="sf-menu">
-            <li class="current men">
-              <a onClick="goToByScroll('page1'); return false;" href="#">Início</a> <strong class="hover"></strong>
+            <li class="current page1">
+              <a href="#page1">Início</a> <strong class="hover"></strong>
             </li>
 
-            <li class="men1">
-              <a onClick="goToByScroll('page2'); return false;" href="#">O que é?</a><strong class="hover"></strong>
+            <li class="page2">
+              <a href="#page2">O que é?</a><strong class="hover"></strong>
             </li>
 
-            <li class="men2">
-              <a onClick="goToByScroll('page3'); return false;" href="#">Documentação</a><strong class="hover"></strong>
+            <li class="page3">
+              <a href="#page3">Documentação</a><strong class="hover"></strong>
             </li>
 
-            <li class=" men3">
-              <a onClick="goToByScroll('page4'); return false;" href="#">Fotos</a> <strong class="hover"></strong>
+            <li class="page4">
+              <a href="#page4">Fotos</a> <strong class="hover"></strong>
             </li>
 
-            <li class=" men4">
-              <a onClick="goToByScroll('page5'); return false;" href="#">Saiba mais</a> <strong class="hover"></strong>
+            <li class="page5">
+              <a href="#page5">Saiba mais</a> <strong class="hover"></strong>
             </li>
           </ul>
         </div>
 
-        <a class="logo" href="#" onClick="goToByScroll('page1'); return false;"></a>
+        <a class="logo" href="#page1"></a>
 			</div>
 		</header>
 
-		<section id="page1" class="content page1-bg">
-			<div class="zerogrid">
-				<div class="col-full">
-          <div class="slider_wrapper">
-            <ul class="items">
-              <li>
-                <div class="caption banner">
-                  <h2>Kit Desenvolvimento Internet of Things da Telefônica | Vivo</h2>
-                </div>
-              </li>
 
-              <li>
-                <div class="caption banner">
-                  <h2>Uma ferramenta criada para difundir o conceito de Internet das Coisas</h2>
-                </div>
-              </li>
+		<section id="page1" class="content content-page1">
+      <div class="banner">
+        <ul>
+          <li class="banner banner1">
+            <h2>Kit Desenvolvimento Internet of Things da Telefônica | Vivo</h2>
+          </li>
 
-              <li>
-                <div class="caption banner">
-                  <h2>Um kit completo de fácil programação para a criação de aplicações</h2>
-                </div>
-              </li>
-            </ul>
-          </div>
+          <li class="banner banner2">
+            <h2>Uma ferramenta criada para difundir o conceito de Internet das Coisas</h2>
+          </li>
 
-          <a href="http://www.youtube.com/watch?v=lQycbNhkTKY" class="fancybox-media"><img src="images/bt-assista-video.png"></a>
-				</div>
-			</div>
+          <li class="banner banner3">
+            <h2>Um kit completo de fácil programação para a criação de aplicações</h2>
+          </li>
+
+          <li class="banner banner4">
+            <h2>Um kit completo de fácil programação para a criação de aplicações</h2>
+          </li>
+        </ul>
+      </div>
+
+      <a href="http://www.youtube.com/watch?v=lQycbNhkTKY" class="fancybox-media"></a>
 		</section>
+
 
 		<section id="page2" class="content">
 			<div class="zerogrid">
@@ -110,78 +106,140 @@
 			</div>
 		</section>
 
-		<section id="page3" class="content">
-			<div class="zerogrid">
 
+		<section id="page3" class="content doc">
+			<div class="zerogrid">
         <h1 class="slogan">Documentação</h1>
 
 				<div class="col-1-4">
 					<div class="wrap-col">
-						<div class="text4"><b>Comando</b></div>
+						<p><b>Comando</b></p>
 						<hr>
-						<p class="text4">GET statuses/mentions_timeline</p>
+
+						<p>GET user/login</p>
 					</div>
 				</div>
 
 				<div class="col-3-4">
 					<div class="wrap-col">
-						<div class="text4"><b>Descrição</b></div>
+						<p><b>Descrição</b></p>
 						<hr>
-						<p class="text4">Returns the 20 most recent mentions (tweets containing a users's @screen_name) for the authenticating user. The timeline returned is the equivalent of the one seen when you view your mentions on twitter.com. This method can only return up to 800 tweets.</p>
+
+						<p>Autenticação do usuário</p>
+
+            <h3>Endereço URL</h3>
+            <p class="text5">http://195.235.93.67:8080/secure/m2m/v2/user/login</p>
+
+            <h3>Cabeçalhos</h3>
+            <p>Authorization *obrigatório</p>
+            <p><i>M2MUser {user}:{password}</i></p>
+
+            <h3>Parâmetros</h3>
+            <p>organization *obrigatório</p>
+            <small>Sempre fornecer <i>organization=1</i></small>
+
+            <p>permissions *obrigatório</p>
+            <small>Sempre fornecer <i>permissions=1</i></small>
 					</div>
 				</div>
 
 				<div class="col-1-4">
 					<div class="wrap-col">
 						<hr>
-						<p class="text4">GET statuses/user_timeline</p>
+						<p>GET services/{serviceName}/</p>
 					</div>
 				</div>
 
 				<div class="col-3-4">
 					<div class="wrap-col">
 						<hr>
-						<p class="text4">Returns a collection of the most recent Tweets posted by the user indicated by the screen_name or user_id parameters. User timelines belonging to protected users may only be requested when the authenticated user either "owns" the timeline or is an approved follower of the owner.</p>
+						<p>Informações detalhadas do serviço</p>
+
+            <h3>Endereço URL</h3>
+            <p>http://195.235.93.67:8080/secure/m2m/v2/services/{serviceName}/</p>
+
+            <h3>Requer Autenticação?</h3>
+            <p>SIM</p>
+
+            <h3>Parâmetros</h3>
+            <p>Nenhum</p>
 					</div>
 				</div>
 
 				<div class="col-1-4">
 					<div class="wrap-col">
 						<hr>
-						<p class="text4">GET statuses/user_timeline</p>
+            <p>GET services/{serviceName}/<br>assets/{assetId}/</p>
 					</div>
 				</div>
 
 				<div class="col-3-4">
 					<div class="wrap-col">
 						<hr>
-						<p class="text4">Returns a collection of the most recent Tweets posted by the user indicated by the screen_name or user_id parameters. User timelines belonging to protected users may only be requested when the authenticated user either "owns" the timeline or is an approved follower of the owner.</p>
+						<p>Retorna informações de um determinado asset de um determinado serviço</p>
+
+            <h3>Endereço URL</h3>
+            <p>http://195.235.93.67:8080/secure/m2m/v2/services/{serviceName}/assets/{assetId}/</p>
+
+            <h3>Requer Autenticação?</h3>
+            <p>SIM</p>
+
+            <h3>Parâmetros</h3>
+            <p>Nenhum</p>
 					</div>
 				</div>
 
 				<div class="col-1-4">
 					<div class="wrap-col">
 						<hr>
-						<p class="text4">GET statuses/user_timeline</p>
+            <p>GET services/{serviceName}/<br>assets/{assetId}/data/</p>
 					</div>
 				</div>
 
 				<div class="col-3-4">
 					<div class="wrap-col">
 						<hr>
-						<p class="text4">Returns a collection of the most recent Tweets posted by the user indicated by the screen_name or user_id parameters. User timelines belonging to protected users may only be requested when the authenticated user either "owns" the timeline or is an approved follower of the owner.</p>
+						<p>Retorna o histórico de dados recebidos de um determinado asset de um determinado serviço</p>
+
+            <h3>Endereço URL</h3>
+            <p>http://195.235.93.67:8080/secure/m2m/v2/services/{serviceName}/assets/{assetId}/data/</p>
+
+            <h3>Requer Autenticação?</h3>
+            <p>SIM</p>
+
+            <h3>Parâmetros</h3>
+            <p>limit *opcional</p>
+            <small>Total de registros para retornar por página. Caso não seja especificado, a API retornará todos os dados recebidos</small>
+
+            <p>sortBy *opcional</p>
+            <small>Ordena os dados (ascendente ou descendente) utilizando o campo informado. Os campos disponíveis são: assetName, assetType, ou registrationTime. Exemplos:
+            <br><i>sortBy=registrationTime</i>
+            <br><i>sortBy!=registrationTime</i></small>
 					</div>
 				</div>
 			</div>
 		</section>
+
 
 		<section id="page4" class="content">
 			<div class="zerogrid">
         <h1 class="slogan">Veja mais</h1>
+
+        <div class="thumbs">
+	        <a href="http://farm8.staticflickr.com/7013/6754656011_3de2cc73a2_z.jpg" style="background-image:url(http://farm8.staticflickr.com/7013/6754656011_3de2cc73a2_m.jpg)" ></a>
+	        <a href="http://farm8.staticflickr.com/7042/6895252645_45f5dfffaa_z.jpg" style="background-image:url(http://farm8.staticflickr.com/7042/6895252645_45f5dfffaa_m.jpg)" ></a>
+	        <a href="http://farm8.staticflickr.com/7183/6943277737_21b521659c_z.jpg" style="background-image:url(http://farm8.staticflickr.com/7183/6943277737_21b521659c_m.jpg)" ></a>
+	        <a href="http://farm8.staticflickr.com/7047/7000951429_5eae078a62_z.jpg" style="background-image:url(http://farm8.staticflickr.com/7047/7000951429_5eae078a62_m.jpg)" ></a>
+	        <a href="http://farm6.staticflickr.com/5346/7051537899_efc7a44830_z.jpg" style="background-image:url(http://farm6.staticflickr.com/5346/7051537899_efc7a44830_m.jpg)" ></a>
+	        <a href="http://farm8.staticflickr.com/7268/6951148260_440661b4d1_z.jpg" style="background-image:url(http://farm8.staticflickr.com/7268/6951148260_440661b4d1_m.jpg)" ></a>
+	        <a href="http://farm8.staticflickr.com/7268/6951148260_440661b4d1_z.jpg" style="background-image:url(http://farm8.staticflickr.com/7268/6951148260_440661b4d1_m.jpg)" ></a>
+	        <a href="http://farm8.staticflickr.com/7268/6951148260_440661b4d1_z.jpg" style="background-image:url(http://farm8.staticflickr.com/7268/6951148260_440661b4d1_m.jpg)" ></a>
+        </div>
 			</div>
 		</section>
 
-		<section id="page5" class="content">
+
+		<section id="page5" class="content content-page5">
 			<div class="zerogrid">
         <h1 class="slogan">Quer saber mais?</h1>
 
@@ -192,6 +250,7 @@
         <img src="images/form.png">
 			</div>
 		</section>
+
 
 		<footer class="zerogrid">
 			<p class="copy">© Telefónica S.A. Todos os direitos reservados</p>
