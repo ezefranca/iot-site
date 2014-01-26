@@ -254,7 +254,6 @@ header {
   top: 0;
 }
 
-//Fancy box youtube
 .fancybox-media {
   background: url(../images/bt-assista-video.png) no-repeat left top;
   position: absolute;
@@ -283,16 +282,6 @@ header {
 
 .current .hover {
   top: 0 !important;
-}
-
-//Banner
-.banner {
-  position: relative;
-  overflow: auto;
-  background-repeat: no-repeat;
-  background-position: left center;
-  background-size: cover;
-  padding: 85px 0 190px 0;
 }
 
 .banner1 {
