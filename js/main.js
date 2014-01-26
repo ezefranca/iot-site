@@ -1,6 +1,6 @@
 $(document).ready(function () {
   //Gallery
-  $('#thumbs a').touchTouch();
+  $('.thumbs a').touchTouch();
 
   //Menu click
   $('.sf-menu a, .logo').click(function () {
