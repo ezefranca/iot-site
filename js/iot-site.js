@@ -1,4 +1,4 @@
-/*! iot-site - v0.1.0 - 2014-01-26
+/*! iot-site - v0.1.0 - 2014-01-27
 * Copyright (c) 2014 ; Licensed  */
 if(typeof Object.create!=="function"){
 Object.create=function(o){

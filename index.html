@@ -135,7 +135,7 @@
 						<p>Autenticação do usuário</p>
 
             <h3>Endereço URL</h3>
-            <p class="text5">http://195.235.93.67:8080/secure/m2m/v2/user/login</p>
+            <p class="text5">http://dca.telefonicabeta.com/m2m/v2/user/login</p>
 
             <h3>Cabeçalhos</h3>
             <p>Authorization *obrigatório</p>
@@ -163,7 +163,7 @@
 						<p>Informações detalhadas do serviço</p>
 
             <h3>Endereço URL</h3>
-            <p>http://195.235.93.67:8080/secure/m2m/v2/services/{serviceName}/</p>
+            <p>http://dca.telefonicabeta.com/m2m/v2/services/{serviceName}/</p>
 
             <h3>Requer Autenticação?</h3>
             <p>SIM</p>
@@ -186,7 +186,7 @@
 						<p>Retorna informações de um determinado asset de um determinado serviço</p>
 
             <h3>Endereço URL</h3>
-            <p>http://195.235.93.67:8080/secure/m2m/v2/services/{serviceName}/assets/{assetId}/</p>
+            <p>http://dca.telefonicabeta.com/m2m/v2/services/{serviceName}/assets/{assetId}/</p>
 
             <h3>Requer Autenticação?</h3>
             <p>SIM</p>
@@ -209,7 +209,7 @@
 						<p>Retorna o histórico de dados recebidos de um determinado asset de um determinado serviço</p>
 
             <h3>Endereço URL</h3>
-            <p>http://195.235.93.67:8080/secure/m2m/v2/services/{serviceName}/assets/{assetId}/data/</p>
+            <p>http://dca.telefonicabeta.com/m2m/v2/services/{serviceName}/assets/{assetId}/data/</p>
 
             <h3>Requer Autenticação?</h3>
             <p>SIM</p>
@@ -254,26 +254,26 @@
           Diga-nos seu nome e e-mail e teremos o prazer de lhe fornecer mais informações sobre o nosso Kit Desenvolvimento Internet of Things.
         </p>
 
-        <form class="send-mail" action="">
-          <input type="text" required name="nome" id="nome" placeholder="Nome">
-          <input type="text" required name="sobrenome" id="sobrenome" placeholder="Sobrenome">
-          <input type="email" required name="email" id="email" placeholder="Email">
+        <form class="send-mail">
+          <input type="text" required name="nome" id="nome" placeholder="Nome*">
+          <input type="text" required name="sobrenome" id="sobrenome" placeholder="Sobrenome*">
+          <input type="email" required name="email" id="email" placeholder="Email*">
 
           <div class="sensor-type sensor-type1">
             <h3>Indique seu ramo de atuação:</h3>
             <p>
               <label>
-                <input type="radio" name="atuacao" id="atuacao" value="estudante" checked> Estudante
+                <input type="radio" name="atuacao" value="estudante" checked> Estudante
               </label>
             </p>
             <p>
               <label>
-                <input type="radio" name="atuacao" id="atuacao" value="professor"> Professor
+                <input type="radio" name="atuacao" value="professor"> Professor
               </label>
             </p>
             <p>
               <label>
-                <input type="radio" name="atuacao" id="atuacao" value="entusiasta"> Entusiasta
+                <input type="radio" name="atuacao" value="entusiasta"> Entusiasta
               </label>
             </p>
           </div>
@@ -284,27 +284,27 @@
             <div class="more-sensors">
               <p>
                 <label>
-                  <input type="checkbox" name="sensores[]" id="sensores" value="movimento"> Sensor de moviemto
+                  <input type="checkbox" name="sensores" value="movimento"> Sensor de moviemto
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" name="sensores" id="sensores" value="restreio"> Sensor de restreio
+                  <input type="checkbox" name="sensores" value="restreio"> Sensor de restreio
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" name="sensores" id="sensores" value="pressao"> Sensor de pressão
+                  <input type="checkbox" name="sensores" value="pressao"> Sensor de pressão
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" name="sensores" id="sensores" value="acelerometro"> Acelerômetro
+                  <input type="checkbox" name="sensores" value="acelerometro"> Acelerômetro
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" name="sensores" id="sensores" value="fumaca"> Sensor de fumaça
+                  <input type="checkbox" name="sensores" value="fumaca"> Sensor de fumaça
                 </label>
               </p>
             </div>
@@ -312,30 +312,30 @@
             <div class="more-sensors">
               <p>
                 <label>
-                  <input type="checkbox" name="sensores" id="sensores" value="poluicao"> Sensor de poluição
+                  <input type="checkbox" name="sensores" value="poluicao"> Sensor de poluição
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" name="sensores" id="sensores" value="eletromagnético"> Sensor eletromagnético
+                  <input type="checkbox" name="sensores" value="eletromagnético"> Sensor eletromagnético
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" name="sensores" id="sensores" value="líquidos"> Sensor de líquidos
+                  <input type="checkbox" name="sensores" value="líquidos"> Sensor de líquidos
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" name="sensores" id="sensores" value="nfc"> Sensor NFC
+                  <input type="checkbox" name="sensores" value="nfc"> Sensor NFC
                 </label>
               </p>
             </div>
           </div>
 
           <div class="form-message">
-            <textarea name="mensagem" placeholder="Deixe uma mensagem"></textarea>
-            <button class="send-button" type="submit">Enviar</button>
+            <textarea name="mensagem" id="message" placeholder="Deixe uma mensagem"></textarea>
+            <button class="send-button">Enviar</button>
           </div>
         </form>
 			</div>
