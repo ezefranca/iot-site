@@ -363,7 +363,13 @@ header.page4 {
 
 
 /* Form */
-.sendMail input {
+.send-mail {
+  width: 670px;
+  margin: 0 auto;
+}
+.send-mail input[type="text"],
+.send-mail input[type="email"],
+.send-mail textarea {
   border: solid 1px #334960;
   font-size: 16px;
   padding: 8px 15px;
@@ -373,3 +379,52 @@ header.page4 {
   width: 150px;
 }
 
+.send-mail textarea {
+  width: 100%;
+  height: 70px;
+}
+
+.sensor-type {
+  float: left;
+  margin-top: 30px;
+  text-align: left;
+}
+
+.sensor-type1 {
+  width: 240px;
+  margin: 30px 20px 0 32px;
+}
+
+.sensor-type h3 {
+  color: rgb(51, 51, 51);
+  font-size: 16px;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.sensor-type label {
+  color: rgb(51, 51, 51);
+  font-size: 14px;
+}
+
+.more-sensors {
+  float: left;
+  width: 180px;
+}
+
+.form-message {
+  padding: 0 80px 0 20px;
+}
+
+.send-button {
+  background: #99cc33;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  padding: 15px 20px;
+  margin-top: 30px;
+  width: 150px;
+       border-radius: 5px;
+  -moz-border-radius: 5px;
+}
