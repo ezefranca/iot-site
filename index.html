@@ -123,12 +123,15 @@
 
         <h2>Instalalção</h2>
 
-        <h3>Windows</h3>
-        <small>OBS: O kit é compatível apenas com o Windows 7 SP1 ou superior!</small>
+        <h3>Windows <small>OBS: O kit é compatível apenas com o Windows 7 SP1 ou superior!</small></h3>
 
         <p>Softwares necessários:</p>
 
         <ol>
+          <li>
+            <p>Instalar software Arduino</p>
+            <p><a href="http://arduino.cc/en/Main/Software#toc2">http://arduino.cc/en/Main/Software#toc2</a></p>
+          </li>
           <li>
             <p>Visual Studio 2013 Express para Windows Desktop (ou superior):</p>
             <p><a href="http://www.visualstudio.com/downloads/download-visual-studio-vs#d-2013-express">http://www.visualstudio.com/downloads/download-visual-studio-vs#d-2013-express</a></p>
@@ -148,6 +151,10 @@
 
         <ol>
           <li>
+            <p>Instalar software Arduino</p>
+            <p><a href="http://arduino.cc/en/Main/Software#toc2">http://arduino.cc/en/Main/Software#toc2</a></p>
+          </li>
+          <li>
             <p>XCode (com Command Line Tools instalado):</p>
             <p><a href="https://itunes.apple.com/br/app/xcode/id497799835?mt=12">https://itunes.apple.com/br/app/xcode/id497799835?mt=12</a></p>
           </li>
@@ -159,6 +166,10 @@
 
         <h3>Linux</h3>
         <ol>
+          <li>
+            <p>Instalar software Arduino</p>
+            <p><a href="http://arduino.cc/en/Main/Software#toc2">http://arduino.cc/en/Main/Software#toc2</a></p>
+          </li>
           <li>
             <p>Build Essentials:</p>
             <p class="sudo">sudo apt-get install build-essential</p>
@@ -176,14 +187,22 @@
         <p>Para inicia-lo novamente, digite no terminal:</p>
         <p class="sudo">sudo kit-iot</p>
 
+        <div class="windows-alert">
+          <p>Se for WINDOWS não utilize sudo</p>
+        </div>
+
+        <p>Para instalar o Kit IoT, conecte o cabo usb no computador e na placa arduino e digite no terminal:</p>
+        <p><span class="sudo">npm install kit-iot -g</span></p>
+
+        <p>Para inicia-lo novamente, digite no terminal:</p>
+        <p><span class="sudo">kit-iot</span></p>
 
         <h2>API rest</h2>
 				<div class="col-1-4">
 					<div class="wrap-col">
 						<p><b>Comando</b></p>
 						<hr>
-
-						<p>GET user/login</p>
+            <p>GET services/{token}/</p>
 					</div>
 				</div>
 
@@ -191,39 +210,10 @@
 					<div class="wrap-col">
 						<p><b>Descrição</b></p>
 						<hr>
-
-						<p>Autenticação do usuário</p>
-
-            <h3>Endereço URL</h3>
-            <p class="text5">http://dca.telefonicabeta.com/m2m/v2/user/login</p>
-
-            <h3>Cabeçalhos</h3>
-            <p>Authorization *obrigatório</p>
-            <p><i>M2MUser {user}:{password}</i></p>
-
-            <h3>Parâmetros</h3>
-            <p>organization *obrigatório</p>
-            <small>Sempre fornecer <i>organization=1</i></small>
-
-            <p>permissions *obrigatório</p>
-            <small>Sempre fornecer <i>permissions=1</i></small>
-					</div>
-				</div>
-
-				<div class="col-1-4">
-					<div class="wrap-col">
-						<hr>
-						<p>GET services/{serviceName}/</p>
-					</div>
-				</div>
-
-				<div class="col-3-4">
-					<div class="wrap-col">
-						<hr>
-						<p>Informações detalhadas do serviço</p>
+            <p>Informações detalhadas do serviço</p>
 
             <h3>Endereço URL</h3>
-            <p>http://dca.telefonicabeta.com/m2m/v2/services/{serviceName}/</p>
+            <p>http://dca.telefonicabeta.com/m2m/v2/services/{token}/</p>
 
             <h3>Requer Autenticação?</h3>
             <p>SIM</p>
@@ -236,7 +226,7 @@
 				<div class="col-1-4">
 					<div class="wrap-col">
 						<hr>
-            <p>GET services/{serviceName}/<br>assets/{assetId}/</p>
+            <p>GET services/{token}/<br>assets/{token}/</p>
 					</div>
 				</div>
 
@@ -246,7 +236,7 @@
 						<p>Retorna informações de um determinado asset de um determinado serviço</p>
 
             <h3>Endereço URL</h3>
-            <p>http://dca.telefonicabeta.com/m2m/v2/services/{serviceName}/assets/{assetId}/</p>
+            <p>http://dca.telefonicabeta.com/m2m/v2/services/{token}/assets/{token}/</p>
 
             <h3>Requer Autenticação?</h3>
             <p>SIM</p>
@@ -259,7 +249,7 @@
 				<div class="col-1-4">
 					<div class="wrap-col">
 						<hr>
-            <p>GET services/{serviceName}/<br>assets/{assetId}/data/</p>
+            <p>GET services/{token}/<br>assets/{token}/data/</p>
 					</div>
 				</div>
 
@@ -269,7 +259,7 @@
 						<p>Retorna o histórico de dados recebidos de um determinado asset de um determinado serviço</p>
 
             <h3>Endereço URL</h3>
-            <p>http://dca.telefonicabeta.com/m2m/v2/services/{serviceName}/assets/{assetId}/data/</p>
+            <p>http://dca.telefonicabeta.com/m2m/v2/services/{token}/assets/{token}/data/</p>
 
             <h3>Requer Autenticação?</h3>
             <p>SIM</p>
