@@ -361,6 +361,30 @@ header.page4 {
   text-align: left;
 }
 
+.doc h2 {
+  color: rgb(52, 52, 52);
+  font-size: 24px;
+  font-weight: bold;
+  margin: 30px 0;
+}
+
+.doc ol p {
+  font-weight: bold;
+}
+
+.doc li {
+  margin: 0 0 5px 0;
+  padding: 0 0 0 30px;
+}
+
+.doc ol a,
+.sudo  {
+  color: rgb(43, 122, 156) !important;
+  display: block;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
 
 /* Form */
 .send-mail {
